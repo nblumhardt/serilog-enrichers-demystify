@@ -1,4 +1,4 @@
-# Serilog.Enrichers.Demystify
+# Serilog.Enrichers.Demystify [![Build status](https://ci.appveyor.com/api/projects/status/puw2a1ab4tkcaea3?svg=true)](https://ci.appveyor.com/project/NicholasBlumhardt/serilog-enrichers-demystify)
 
 Unmangle the names of `async` and iterator methods in exception stack traces using @benaadams's Demystifier.
 
