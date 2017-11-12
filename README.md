@@ -7,7 +7,7 @@ Unmangle the names of `async` and iterator methods in exception stack traces usi
 Install from NuGet:
 
 ```
-Install-Package Serilog.Enrichers.Demystifier
+Install-Package Serilog.Enrichers.Demystify
 ```
 
 Configure log event enrichment:
