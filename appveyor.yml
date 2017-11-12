@@ -1,0 +1,17 @@
+version: '{build}'
+skip_tags: true
+image: Visual Studio 2017
+configuration: Release
+test: off
+build_script:
+- ps: ./Build.ps1
+artifacts:
+- path: artifacts/Serilog.Enrichers.Demystify*.nupkg
+deploy:
+- provider: NuGet
+  api_key:
+    secure: /Dm+EI0E1vCa+rZfYkluSnk7iSnAFKNOcEpreQrG88uYqCm//dKpY5vwqb1EJm3j
+  skip_symbols: true
+  on:
+    branch: /^(master|dev)$/
+

@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Unmangle async/iterator stack traces in Serilog events</Description>
+    <VersionPrefix>0.1.0</VersionPrefix>
+    <Authors>Serilog Contributors</Authors>
+    <TargetFrameworks>net46;netstandard2.0</TargetFrameworks>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyName>Serilog.Enrichers.Demystify</AssemblyName>
+    <PackageId>Serilog.Enrichers.Demystify</PackageId>
+    <RootNamespace>Serilog</RootNamespace>
+    <PackageTags>serilog;demystifier</PackageTags>
+    <PackageIconUrl>http://serilog.net/images/serilog-community-nuget.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/nblumhardt/serilog-enrichers-demystify</PackageProjectUrl>
+    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <TreatSpecificWarningsAsErrors />
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net46' ">
+    <!-- Don't reference the full NETStandard.Library -->
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Serilog" Version="2.5.0" />
+    <PackageReference Include="Ben.Demystifier" Version="0.0.3" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+  </ItemGroup>
+
+</Project>
