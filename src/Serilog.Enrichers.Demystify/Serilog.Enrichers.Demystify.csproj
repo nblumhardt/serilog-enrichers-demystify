@@ -4,7 +4,7 @@
     <Description>Unmangle async/iterator stack traces in Serilog events</Description>
     <VersionPrefix>0.1.0</VersionPrefix>
     <Authors>Serilog Contributors</Authors>
-    <TargetFrameworks>net46;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>Serilog.Enrichers.Demystify</AssemblyName>
     <PackageId>Serilog.Enrichers.Demystify</PackageId>
@@ -18,7 +18,7 @@
     <TreatSpecificWarningsAsErrors />
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'net46' ">
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net45' ">
     <!-- Don't reference the full NETStandard.Library -->
     <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
   </PropertyGroup>
@@ -28,7 +28,7 @@
     <PackageReference Include="Ben.Demystifier" Version="0.0.4" />
   </ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
