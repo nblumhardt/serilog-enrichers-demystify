@@ -18,7 +18,7 @@ namespace DemystifyExample
 
             try
             {
-                return await FailingMethod();
+                return await FailingMethodAsync();
             }
             catch (Exception ex)
             {
@@ -28,9 +28,9 @@ namespace DemystifyExample
         }
 
         [MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.NoOptimization)]
-        static Task<int> FailingMethod()
+        static async Task<int> FailingMethodAsync()
         {
-            return Task.FromResult(FailingEnumerator().Sum());
+            return await Task.FromResult(FailingEnumerator().Sum());
         }
 
         [MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.NoOptimization)]
